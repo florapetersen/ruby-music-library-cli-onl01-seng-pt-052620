@@ -68,7 +68,7 @@ class MusicLibraryController
     #puts "#{song_list}"
     user_input = gets.chomp.to_i
     if user_input >= 1 && user_input <= song_list.length
-      current_song = song_list[user_input-1]
+      current_song = song_list[user_input]
       puts "Playing #{current_song.name} by #{current_song.artist.name}"
     end
   end

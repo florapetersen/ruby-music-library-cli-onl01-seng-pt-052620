@@ -62,16 +62,16 @@ class MusicLibraryController
     end
   end
 
-  def play_song
-    song_list = list_songs
-    puts "Which song number would you like to play?"
-    puts "#{song_list}"
-    user_input = gets.chomp.to_i
-    if user_input >= 1 && user_input <= Song.all.uniq.length
-      current_song = Song.all.uniq[user_input]
-      puts "Playing #{current_song.name} by #{current_song.artist.name}" if current_song
-    end
-  end
+  #def play_song
+    #song_list = list_songs
+    #puts "Which song number would you like to play?"
+    #puts "#{song_list}"
+    #user_input = gets.chomp.to_i
+    #if user_input >= 1 && user_input <= Song.all.uniq.length
+      #current_song = Song.all.uniq[user_input]
+      #puts "Playing #{current_song.name} by #{current_song.artist.name}" if current_song
+    #end
+  #end
 
   #def play_song
     #puts "Which song number would you like to play?"

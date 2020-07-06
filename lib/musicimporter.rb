@@ -62,27 +62,27 @@ class MusicLibraryController
     end
   end
 
-  #def play_song
-    #song_list = list_songs
-    #puts "Which song number would you like to play?"
-    #puts "#{song_list}"
-    #user_input = gets.chomp.to_i
-    #if user_input >= 1 && user_input <= song_list.length
-      #current_song = song_list[user_input]
-      #puts "Playing #{current_song.name} by #{current_song.artist.name}"
-    #end
-  #end
-
   def play_song
+    song_list = list_songs
     puts "Which song number would you like to play?"
-
-    input = gets.strip.to_i
-    if (1..Song.all.length).include?(input)
-      song = Song.all.uniq.sort{ |a, b| a.name <=> b.name }[input - 1]
+    puts "#{song_list}"
+    user_input = gets.chomp.to_i
+    if user_input >= 1 && user_input <= Song.all.uniq.length
+      current_song = Song.all.uniq[user_input]
+      puts "Playing #{current_song.name} by #{current_song.artist.name}" if current_song
     end
-
-    puts "Playing #{song.name} by #{song.artist.name}" if song
   end
+
+  #def play_song
+    #puts "Which song number would you like to play?"
+
+    #input = gets.strip.to_i
+    #if (1..Song.all.length).include?(input)
+      #song = Song.all.uniq.sort{ |a, b| a.name <=> b.name }[input - 1]
+    #end
+
+    #puts "Playing #{song.name} by #{song.artist.name}" if song
+  #end
 end
 
 class MusicImporter

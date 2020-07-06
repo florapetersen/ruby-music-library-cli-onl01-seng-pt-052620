@@ -84,7 +84,6 @@ class MusicLibraryController
     puts "Playing #{song.name} by #{song.artist.name}" if song
   end
 
-  music_library_controller.list_songs
 end
 
 class MusicImporter

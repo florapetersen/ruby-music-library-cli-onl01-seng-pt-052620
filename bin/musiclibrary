@@ -3,4 +3,4 @@
 require_relative '../config/environment'
 
 MusicLibraryController.new.call
-MusicLibraryController.new.list_songs
+MusicLibraryController.list_songs
